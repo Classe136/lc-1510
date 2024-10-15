@@ -46,6 +46,24 @@ a:hover {
     color: var(--color-light);
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+.row {
+    padding-top: 10px;
+}
+
 /* Flex Utility */
 .d-flex {
     display: flex;
@@ -130,6 +148,46 @@ main .main-content nav a:hover::after {
 
 .main-content .col {
     width: calc(100% / 6);
+    padding: 5px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.card-image {
+    position: relative;
+
+}
+
+.card:hover .card-image::after {
+    content: '\f144';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 4em;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    text-align: center;
+    padding: 10px 0;
+}
+
+small {
+    color: var(--color-lightgrey);
+}
+
+section>small {
+    padding-bottom: 15px;
+    display: block;
 }
 
 /* div.box {
@@ -152,10 +210,23 @@ main .main-content nav a:hover::after {
 
 
 /**** media queries ****/
+@media screen and (max-width: 1200px) {
+    .main-content .col {
+        width: calc(100% / 4);
+    }
+}
 
-@media screen and (max-width: 996px) {}
+@media screen and (max-width: 996px) {
+    .main-content .col {
+        width: calc(100% / 3);
+    }
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .main-content .col {
+        width: calc(100% / 2);
+    }
+}
 
 @media screen and (max-width: 576px) {
     #sidebar {
@@ -165,5 +236,9 @@ main .main-content nav a:hover::after {
     header {
         left: 50px;
         width: calc(100% - 50px);
+    }
+
+    .main-content .col {
+        width: calc(100% / 1);
     }
 }
