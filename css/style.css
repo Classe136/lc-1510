@@ -1,5 +1,14 @@
 /* *** Global Styles *** */
-/* TODO Custom Properties */
+/*  Custom Properties */
+:root {
+    --color-dark: #141922;
+    --color-darkgrey: #282828;
+    --color-light: #ffffff;
+    --color-black: #000000;
+    --color-lightgrey: #c1c1c1;
+    --color-highlight: #9ae22d;
+    --color-redcolor: #ca1717;
+}
 
 /* Reset */
 * {
@@ -8,7 +17,86 @@
     box-sizing: border-box;
 }
 
+.debug {
+    border: 1px solid red;
+}
+
 /* Generals */
 body {
-    /* colore sfondo footer */
+    background-color: #282828;
+    color: var(--color-light);
 }
+
+.wrapper {
+    background-color: #282828;
+    height: 100vh;
+}
+
+/* Flex Utility */
+.d-flex {
+    display: flex;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+.upper-content {
+    background-color: var(--color-dark);
+    flex: 1 1 auto;
+    /* width: 100%;
+    height: calc(100vh - 100px); */
+    overflow-y: auto;
+    /* min-height: 0; */
+}
+
+/* Playbar */
+footer {
+    background-color: #282828;
+    /* height: 100px; */
+    flex: 0 0 100px;
+}
+
+/* Sidebar */
+#sidebar {
+    /* width: 230px; */
+    flex: 0 0 230px;
+    background-color: var(--color-black);
+}
+
+/* Main */
+main {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    /* height: 100%; */
+    padding: 100px 20px 20px;
+
+}
+
+.header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 230px;
+    width: calc(100% - 230px);
+    z-index: 3000;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+
+/* div.box {
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50%; */
+
+
+/* } */
+
+/*.box img {
+    width: 100%;
+    border-radius: 50%;
+
+
+}
+
+*/
