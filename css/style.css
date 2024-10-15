@@ -1,0 +1,14 @@
+/* *** Global Styles *** */
+/* TODO Custom Properties */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generals */
+body {
+    /* colore sfondo footer */
+}
