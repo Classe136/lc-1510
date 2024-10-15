@@ -23,6 +23,7 @@
 
 /* Generals */
 body {
+    font-family: "Montserrat", sans-serif;
     background-color: #282828;
     color: var(--color-light);
 }
@@ -30,6 +31,19 @@ body {
 .wrapper {
     background-color: #282828;
     height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-lightgrey);
+}
+
+a:hover {
+    color: var(--color-light);
 }
 
 /* Flex Utility */
@@ -41,6 +55,15 @@ body {
     flex-direction: column;
 }
 
+.j-center {
+    justify-content: center;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+/* Page */
 .upper-content {
     background-color: var(--color-dark);
     flex: 1 1 auto;
@@ -84,6 +107,31 @@ main {
     text-align: right;
 }
 
+main .main-content nav a {
+    text-transform: uppercase;
+    padding: 6px 10px;
+    display: block;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+main .main-content nav a::after {
+    content: '';
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    height: 3px;
+
+}
+
+main .main-content nav a:hover::after {
+    background-color: var(--color-highlight);
+}
+
+.main-content .col {
+    width: calc(100% / 6);
+}
+
 /* div.box {
     width: 200px;
     height: 200px;
@@ -100,3 +148,22 @@ main {
 }
 
 */
+
+
+
+/**** media queries ****/
+
+@media screen and (max-width: 996px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {
+    #sidebar {
+        flex: 0 0 50px;
+    }
+
+    header {
+        left: 50px;
+        width: calc(100% - 50px);
+    }
+}
