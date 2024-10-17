@@ -381,6 +381,16 @@ input[type="range"] {
     height: 7px;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    opacity: 0;
+}
+
+.controller-bar:hover input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    opacity: 1;
+}
+
 /**** media queries ****/
 @media screen and (max-width: 1200px) {
     .main-content .col {
